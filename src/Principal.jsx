@@ -1,4 +1,4 @@
-import "./Principal.css";
+import "./Estilos.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 function Pag0(props) {
   return (
