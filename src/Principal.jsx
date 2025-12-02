@@ -1,34 +1,92 @@
 import "./Estilos1.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import jpg1 from "./assets/imagenes/1.webp";
+import jpg2 from "./assets/imagenes/2.webp";
+import jpg3 from "./assets/imagenes/3.webp";
+import jpg4 from "./assets/imagenes/4.webp";
+import jpg5 from "./assets/imagenes/5.webp";
+import jpg6 from "./assets/imagenes/6.webp";
+
 function Pag0(props) {
   return (
     <div className="fondo0">
-      <h1>Descubre la verdadera magia de la Navidad</h1>
-      <div className="cont0">
-        <div className="card" style={{ width: "18rem" }}>
-          <img
-            src="/imagenes/contenido1.jpg"
-            className="card-img-top"
-            alt="..."
-          />
-          <div className="card-body">
-            <p className="card-text">
-              ¿Sabías que muchas de nuestras tradiciones tienen cientos de años?
-              Sumérgete en el origen de esta fiesta y redescubre su significado.
-            </p>
+      <h1>Danzas de Bolivia</h1>
+      <div id="carouselExample" className="carousel slide">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img
+              src={jpg1}
+              className="d-block w-100 carousel-img-fix"
+              alt="Danza 1"
+            />
+          </div>
+          <div className="carousel-item">
+            <img
+              src={jpg2}
+              className="d-block w-100 carousel-img-fix"
+              alt="Danza 2"
+            />
+          </div>
+          <div className="carousel-item">
+            <img
+              src={jpg3}
+              className="d-block w-100 carousel-img-fix"
+              alt="Danza 3"
+            />
+          </div>
+          <div className="carousel-item">
+            <img
+              src={jpg4}
+              className="d-block w-100 carousel-img-fix"
+              alt="Danza 4"
+            />
           </div>
         </div>
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
   );
 }
+
 function Pag1(props) {
-  return <div className="fondo1"></div>;
-}
-function Pag2(props) {
   return (
-    <div className="fondo2">
-      <h1>Esta es la pagina 2</h1>
+    <div className="fondo1">
+      <div className="card card-personalizada">
+        <div className="contenedor-imagenes">
+          <img src={jpg5} className="img-mitad" alt="Imagen 5" />
+          <img src={jpg6} className="img-mitad" alt="Imagen 6" />
+        </div>
+        <div className="card-body">
+          <h2>Danzas de Bolivia</h2>
+          <p className="card-text">
+            Estas son algunas de las danzas tradicionales de Bolivia que
+            representan nuestra cultura.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
@@ -36,32 +94,59 @@ function Pag2(props) {
 function Principal(props) {
   return (
     <div className="padre">
-      <div className="baner">La Navidad</div>
+      <div className="titulo">Centro Cultural de Danzas Boliviana</div>
+
       <div className="menu">
         <ul>
-          <span>
-            <Link to="/">Inicio</Link>
+          <span className="menuit">
+            <Link to="/">Imagenes de las danzas </Link>
           </span>
-          <span>
-            <Link to="/pag1">Navidad En Bolivia</Link>
-          </span>
-          <span>
-            <Link to="/pag2">Navidad En El Mundo</Link>
+          <span className="menuit">
+            <Link to="/pag1">Mas danzas </Link>
           </span>
         </ul>
       </div>
 
+      <div className="carrera">Informatica - Programacion Web 2 - INF-122</div>
+
       <div className="contenido">
         <Routes>
-          <Route path="/" element={<Pag0></Pag0>}></Route>
-          <Route path="/pag1" element={<Pag1></Pag1>}></Route>
-          <Route path="/pag2" element={<Pag2></Pag2>}></Route>
+          <Route path="/" element={<Pag0 />} />
+          <Route path="/pag1" element={<Pag1 />} />
         </Routes>
       </div>
-      <footer>
-        <div>pie de pagina</div>
+
+      <div className="redes">
+        <ul>
+          <li className="redesit">
+            <h3>
+              <a
+                href="https://www.facebook.com/henrydario.chipanaergueta"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Facebook
+              </a>
+            </h3>
+          </li>
+          <li className="redesit">
+            <h3>
+              <a
+                href="https://www.instagram.com/henrydario_chipana/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Instagram
+              </a>
+            </h3>
+          </li>
+        </ul>
+      </div>
+      <footer className="pie">
+        <div>@Henry Dario Chipana Ergueta - 2025</div>
       </footer>
     </div>
   );
 }
+
 export default Principal;

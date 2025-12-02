@@ -5,85 +5,111 @@ a {
 
 .padre {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   width: 100%;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "titulo titulo    titulo"
+    "menu   menu      menu"
+    "nombre contenido redes"
+    "pie    pie       pie";
+  gap: 10px;
 }
-.baner {
-  background-image: url("/imagenes/Cabeza3.jpg");
-  background-position: center;
-  background-size: cover;
-  color: rgb(0, 0, 0);
-  height: 200px;
-  font-size: 90px;
+
+.titulo {
+  grid-area: titulo;
+  background-color: #ff0000;
   text-align: center;
-  line-height: 200px;
-  display: block;
-  font-family: "Brush Script MT", cursive;
-  background-repeat: no-repeat;
-  margin-bottom: 20px;
-  flex-shrink: 0;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .menu {
-  background-image: url("/imagenes/menu.jpg");
-  background-size: cover;
-  height: 90px;
-  font-size: 25px;
+  grid-area: menu;
+  background-color: #d4ff00;
   text-align: center;
-  line-height: 100px;
-  font-family: "Brush Script MT", cursive;
-  padding-right: 50px;
-  flex-shrink: 0;
+  padding: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+}
+
+.menuit {
+  margin: 0 10px;
+}
+
+.carrera {
+  grid-area: nombre;
+  background-color: #04ff00;
+  text-align: center;
+  padding: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: sticky;
-  top: 10px;
-  z-index: 1000;
-}
-.menu span {
-  margin: 0 80px;
-}
-.menu a {
-  padding: 10px 50px;
-}
-.menu a:hover {
-  background-color: rgb(0, 0, 0);
-  color: red;
-  border-color: red;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-}
-.menu ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-.fondo0 {
-  background-image: url("/imagenes/contenido.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  min-height: 100vh;
-  margin-top: 20px;
-  text-align: center;
-}
-.cont0 {
-  margin-top: 100px;
-  margin-left: 200px;
-}
-.fondo0 h1 {
-  padding-top: 180px;
-  font-size: 70px;
-  color: rgb(0, 0, 0);
-  font-weight: 900;
+  font-size: 30px;
 }
 
-.fondo1 {
-  background-color: yellow;
-  padding: 5px;
+.contenido {
+  grid-area: contenido;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid #ddd;
 }
-.fondo2 {
-  background-color: green;
-  padding: 5px;
+
+.carousel-img-fix {
+  height: 500px;
+}
+
+.card-personalizada {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.contenedor-imagenes {
+  display: flex;
+  width: 100%;
+}
+
+.img-mitad {
+  width: 50%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.redes {
+  grid-area: redes;
+  background-color: #00ff04;
+  text-align: center;
+  padding: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.redes ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.redesit {
+  margin-bottom: 10px;
+}
+
+.pie {
+  grid-area: pie;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-family: "Segoe UI";
 }
