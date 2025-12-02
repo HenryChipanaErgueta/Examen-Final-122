@@ -1,0 +1,89 @@
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.padre {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.baner {
+  background-image: url("/imagenes/Cabeza3.jpg");
+  background-position: center;
+  background-size: cover;
+  color: rgb(0, 0, 0);
+  height: 200px;
+  font-size: 90px;
+  text-align: center;
+  line-height: 200px;
+  display: block;
+  font-family: "Brush Script MT", cursive;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+.menu {
+  background-image: url("/imagenes/menu.jpg");
+  background-size: cover;
+  height: 90px;
+  font-size: 25px;
+  text-align: center;
+  line-height: 100px;
+  font-family: "Brush Script MT", cursive;
+  padding-right: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 10px;
+  z-index: 1000;
+}
+.menu span {
+  margin: 0 80px;
+}
+.menu a {
+  padding: 10px 50px;
+}
+.menu a:hover {
+  background-color: rgb(0, 0, 0);
+  color: red;
+  border-color: red;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+.menu ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.fondo0 {
+  background-image: url("/imagenes/contenido.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+  margin-top: 20px;
+  text-align: center;
+}
+.cont0 {
+  margin-top: 100px;
+  margin-left: 200px;
+}
+.fondo0 h1 {
+  padding-top: 180px;
+  font-size: 70px;
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+}
+
+.fondo1 {
+  background-color: yellow;
+  padding: 5px;
+}
+.fondo2 {
+  background-color: green;
+  padding: 5px;
+}
